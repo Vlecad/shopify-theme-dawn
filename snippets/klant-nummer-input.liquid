@@ -2,16 +2,4 @@
   <p>uw klanten nummer is terug te vinden bovenaan op een factuur. Dit is verplicht in te vullen bij een aankoop van 'Coins' en stelt ons in staat de bestelling aan de juiste klant te koppelen. De correctheid van deze gegevens wordt toevertrouwd aan de klant.</p>
     <label for="klant-nummer">Klant Nummer</label>
     <input required class="required" id="klant-nummer" type="text" name="attributes[Klant Nummer]" inputmode="numeric" pattern="\d*" placeholder="000000" min="0" max="999999" value="{{ cart.attributes["Klant Nummer"] }}"/>
-
-      <label for="balloons">Number of balloons to order (multiples of 10):</label>
-    <input
-      id="balloons"
-      type="number"
-      name="balloons"
-      step="10"
-      min="0"
-      max="100"
-      required />
-    <span class="validity"></span>
-  </div>
 </p>

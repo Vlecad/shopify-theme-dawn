@@ -1,5 +1,5 @@
 <p class="cart-attribute__field">
     <label for="klant-nummer">Klant Nummer</label>
-    <input required class="required" id="klant-nummer" type="text" name="attributes[Klant Nummer]" inputmode="numeric" pattern="\d*" placeholder="000000"value="{{ cart.attributes["Klant Nummer"] }}"/><span class="validity"></span>
+    <input required class="required" id="klant-nummer" type="text" name="attributes[Klant Nummer]" inputmode="numeric" pattern="\d*" placeholder="000000" min="0" max="999999" value="{{ cart.attributes["Klant Nummer"] }}"/><span class="validity"></span>
 
 </p>

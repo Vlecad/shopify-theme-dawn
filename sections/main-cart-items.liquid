@@ -69,7 +69,13 @@
             </thead>
 
             <tbody>
+              {% assign contains_coins = 0 %}
               {%- for item in cart.items -%}
+
+                {% if item.product.title == 'Coins' %}
+                  {% assign contains_coins = contains_coins | plus: item.quantity %}
+                {% endif %}
+                
                 <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
@@ -345,8 +351,13 @@
     </p>
     <p class="cart-attribute__field">
       <label for="klant-nummer">Klant Nummer</label>
-      <input required id="klant-nummer" type="text" name="attributes[Klant Nummer]" value="{{ cart.attributes["Klant Nummer"] }}">
+      <input required class="required" id="klant-nummer" type="text" name="attributes[Klant Nummer]" value="{{ cart.attributes["Klant Nummer"]}}">
     </p>
+
+    {% if contains_coins > 0 %}
+      {% include 'klant-nummer-input' %}
+    {% endif %}
+
   </form>
 </cart-items>
 

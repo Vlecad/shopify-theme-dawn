@@ -343,6 +343,10 @@
     <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">
       {{ 'accessibility.loading' | t }}
     </p>
+    <p class="cart-attribute__field">
+      <label for="klant-nummer">Klant Nummer</label>
+      <input required id="klant-nummer" type="text" name="attributes[Klant Nummer]" value="{{ cart.attributes["Klant Nummer"] }}">
+    </p>
   </form>
 </cart-items>
 
